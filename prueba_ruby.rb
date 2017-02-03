@@ -63,8 +63,8 @@ while op != 4
     data = file.readlines()
 
     puts "Alumnos aprobados: "
-    def aprobado(alumnos,promedio)
-      if promedio.to_i>5
+    def aprobado(alumnos,promedio,nota = 5)
+      if promedio.to_i>nota
       puts "#{alumnos} #{promedio}"
     end
     end
