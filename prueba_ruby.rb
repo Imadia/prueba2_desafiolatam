@@ -61,6 +61,8 @@ while op != 4
   when 3
     file = File.open("alumnos.txt", "r")
     data = file.readlines()
+    puts "Ingrese nota de aprobacion: "
+    nota = gets.chomp.to_i
 
     puts "Alumnos aprobados: "
     def aprobado(alumnos,promedio,nota = 5)
@@ -72,7 +74,7 @@ while op != 4
     data.each do |i|
       a = i.split(" ")
         a.each_slice(2) do |alumno|
-        aprobado(*alumno)
+        aprobado(*alumno, nota)
       end
     end
 
